@@ -4,10 +4,11 @@ import Header from './components/Header/Header';
 import Entry from './views/Entry';
 
 import './App.css';
+import { PlannerProvider } from './context/PlannerContext';
 
 export default function App() {
   return (
-    <> {/* TODO: Add PlannerProvider */}
+    <PlannerProvider>
       <Header />
       <BrowserRouter>
         <Switch>
@@ -22,6 +23,6 @@ export default function App() {
           </Route>
         </Switch>
       </BrowserRouter>
-    </>
+    </PlannerProvider>
   );
 }
